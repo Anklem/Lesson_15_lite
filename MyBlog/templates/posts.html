@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for post in posts %}
+        <li>
+            <h3>{{ post.title }}</h3>
+            <h4>{{ post.content }}</h4>
+            <h5>Опубликовано: {{ post.created_at }}</h5>
+        </li>
+    {% empty %}
+        <li>Нет постов, скоро напишу</li>
+    {% endfor %}
+</ul>
+{% endblock %}
